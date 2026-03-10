@@ -1,0 +1,10 @@
+services:
+  ml-api:
+    build: .
+    container_name: ml_sentiment_api
+    ports:
+      - "8080:8080"
+    environment:
+      - PRODUCTION=true
+      - API_KEY=${API_KEY}   # injected from host .env file
+    restart: unless-stopped
