@@ -30,7 +30,7 @@ jobs:
         env:
           API_KEY: test_key_123
         run: |
-          pytest tests/ -v
+          PYTHONPATH=. pytest tests/ -v
 
   build-and-push:
     name: Build and Push Docker Image
