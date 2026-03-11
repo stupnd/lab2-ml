@@ -67,7 +67,7 @@ def predict():
     try:
         logger.info("Predict endpoint accessed")
 
-        data = request.get_json()
+        data = request.get_json(silent=True)
 
         if not data:
             logger.warning("No JSON data provided")
